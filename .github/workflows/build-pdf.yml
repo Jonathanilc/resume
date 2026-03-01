@@ -11,6 +11,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Cache LaTeX Docker image
+        id: latex-docker-cache
+        uses: actions/cache@v4
+        with:
+          path: /tmp/texlive-docker-cache
+          key: latex-docker-${{ runner.os }}-texlive-full-latest
+
+      - name: Load or pull LaTeX Docker image
+        run: |
+          if [ -f /tmp/texlive-docker-cache/texlive-full-latest.tar ]; then
+            echo "Loading Docker image from cache..."
+            docker load -i /tmp/texlive-docker-cache/texlive-full-latest.tar
+          else
+            echo "Pulling Docker image (will be cached for next run)..."
+            docker pull ghcr.io/xu-cheng/texlive-full:latest
+            mkdir -p /tmp/texlive-docker-cache
+            docker save ghcr.io/xu-cheng/texlive-full:latest -o /tmp/texlive-docker-cache/texlive-full-latest.tar
+          fi
+
       - name: Compile LaTeX to PDF
         uses: xu-cheng/latex-action@v3
         with:
