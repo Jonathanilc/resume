@@ -43,3 +43,8 @@
 # do not upload secret infomation
 myresume.tex
 myresume.pdf
+
+# Per-company / sensitive variants — keep local only.
+# Any folder under variants/ starting with "private-" is ignored entirely.
+# (PDFs and LaTeX aux files are already excluded by global rules above.)
+variants/private-*/

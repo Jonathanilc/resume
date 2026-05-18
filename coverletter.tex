@@ -1,0 +1,63 @@
+% !TEX program = xelatex
+% Baseline cover letter — generic, no company specified.
+% Tailored copies live in variants/<variant>/coverletter.tex.
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\definecolor{accent}{HTML}{0066CC}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+\pagenumbering{gobble}
+
+\begin{document}
+
+% --- Header (matches resume styling) ------------------------------------------
+\begin{flushright}
+{\Large\textbf{Jonathan Xu}}\\[0.3em]
+\faEnvelope\ \href{mailto:jonathanilc@hotmail.com}{jonathanilc@hotmail.com} \\
+\faPhone\ (+64) 21-026-24525 \\
+\faLinkedin\ \href{https://www.linkedin.com/in/jonathan-x-4aba55115}{jonoxu}
+\end{flushright}
+
+\vspace{0.5em}
+
+\today
+
+\vspace{0.5em}
+
+Hiring Manager \\
+[Company Name] \\
+[Company Location]
+
+\vspace{0.5em}
+
+% --- Body ---------------------------------------------------------------------
+Dear Hiring Manager,
+
+I am writing to apply for the [Role Title] position at [Company]. With over a decade of experience delivering full-stack and cloud-native software, I have led the design, build, and operation of systems that span product UIs, distributed backends, and the AWS infrastructure beneath them. The combination of breadth and ownership your role describes is exactly the kind of work I want to keep doing.
+
+At IDEXX, I lead a refactor of the billing platform from a horizontal layout to a vertical-slice architecture, with the API layer driven by an OpenAPI specification. Before that, I designed and shipped the billing pipeline that collects and reconciles data from 5,000+ veterinary sites and 9,000 hospitals before syncing to SAP for monthly invoicing — a system the business depends on every month. Earlier in my IDEXX tenure I owned both the React client and the Node.js services for Vet Radar, including the Terraform that ran the AWS footprint.
+
+I am drawn to [Company] because [reason — culture, product, technical bet, mission]. The problems your team is solving in [domain / area] line up with the work I find most rewarding: ambiguous scope, real users, and engineering trade-offs that matter.
+
+I would welcome the opportunity to discuss how my experience could contribute to [Company]. Thank you for your consideration.
+
+\vspace{0.5em}
+
+Sincerely, \\
+Jonathan Xu
+
+\end{document}

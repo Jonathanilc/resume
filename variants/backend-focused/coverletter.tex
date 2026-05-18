@@ -1,0 +1,61 @@
+% !TEX program = xelatex
+% Variant: Backend-focused cover letter.
+% Sibling of variants/backend-focused/resume.tex — pair as one application.
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\definecolor{accent}{HTML}{0066CC}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+\pagenumbering{gobble}
+
+\begin{document}
+
+\begin{flushright}
+{\Large\textbf{Jonathan Xu}}\\[0.3em]
+\faEnvelope\ \href{mailto:jonathanilc@hotmail.com}{jonathanilc@hotmail.com} \\
+\faPhone\ (+64) 21-026-24525 \\
+\faLinkedin\ \href{https://www.linkedin.com/in/jonathan-x-4aba55115}{jonoxu}
+\end{flushright}
+
+\vspace{0.5em}
+
+\today
+
+\vspace{0.5em}
+
+Hiring Manager \\
+[Company Name] \\
+[Company Location]
+
+\vspace{0.5em}
+
+Dear Hiring Manager,
+
+I am writing to apply for the [Backend / Platform Engineer] role at [Company]. Over the past decade I have built and operated production backend systems — most recently in Go on AWS — and the description of this role aligns closely with the work I have been doing and want to keep doing.
+
+At IDEXX, I lead the refactor of the billing platform: moving the Go codebase from a horizontal layout to a vertical-slice architecture, with the API layer regenerated from an OpenAPI specification so contracts, clients, and documentation stay in sync. Before that I designed and shipped the billing pipeline that aggregates and reconciles data from 5,000+ veterinary sites and 9,000 hospitals before syncing to SAP for monthly invoicing — an idempotent pipeline the business relies on every billing cycle. The infrastructure underneath these systems (ECS/Fargate, S3, Terraform) is something I have owned end-to-end since the Vet Radar team, where I also wrote the Node.js services.
+
+I am drawn to [Company] because [reason — the backend problem space, the stack, the scale, the team]. The trade-offs your team is making around [domain / area — e.g. data consistency, throughput, multi-tenant isolation] line up with the engineering problems I find most rewarding.
+
+I would welcome the chance to discuss how my experience in Go, distributed services, and AWS could contribute to [Company]. Thank you for your consideration.
+
+\vspace{0.5em}
+
+Sincerely, \\
+Jonathan Xu
+
+\end{document}

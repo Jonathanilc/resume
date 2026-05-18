@@ -1,8 +1,9 @@
-name: Build resume PDF
+name: Build resume and cover letter PDFs
 
 on:
   push:
     branches: [main, master]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -30,14 +31,52 @@ jobs:
             docker save ghcr.io/xu-cheng/texlive-full:latest -o /tmp/texlive-docker-cache/texlive-full-latest.tar
           fi
 
-      - name: Compile LaTeX to PDF
+      - name: Compile baseline resume and cover letter
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex
+          root_file: |
+            resume.tex
+            coverletter.tex
           latexmk_use_xelatex: true
 
-      - name: Upload PDF artifact
+      - name: Compile variants
+        run: |
+          shopt -s nullglob
+          variants=(variants/*/*.tex)
+          if [ ${#variants[@]} -eq 0 ]; then
+            echo "No variants found, skipping."
+            exit 0
+          fi
+          for v in "${variants[@]}"; do
+            variant_dir=$(dirname "$v")
+            echo "::group::Compiling $v"
+            docker run --rm \
+              -v "$PWD:/workdir" \
+              -w /workdir \
+              ghcr.io/xu-cheng/texlive-full:latest \
+              latexmk -xelatex -output-directory="$variant_dir" -interaction=nonstopmode "$v"
+            echo "::endgroup::"
+          done
+
+      - name: Collect PDFs
+        run: |
+          mkdir -p output
+          [ -f resume.pdf ] && cp resume.pdf output/resume.pdf
+          [ -f coverletter.pdf ] && cp coverletter.pdf output/coverletter.pdf
+          shopt -s nullglob
+          for d in variants/*/; do
+            variant=$(basename "$d")
+            for pdf in "$d"*.pdf; do
+              [ -f "$pdf" ] || continue
+              doctype=$(basename "$pdf" .pdf)
+              cp "$pdf" "output/${variant}-${doctype}.pdf"
+            done
+          done
+          echo "Built PDFs:"
+          ls -la output/
+
+      - name: Upload PDFs
         uses: actions/upload-artifact@v4
         with:
-          name: resume-pdf
-          path: resume.pdf
+          name: resume-pdfs
+          path: output/*.pdf
