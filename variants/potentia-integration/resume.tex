@@ -1,0 +1,107 @@
+% !TEX program = xelatex
+% Variant: Potentia — Senior Integration Developer (6-month contract, Wellington / remote NZ)
+% JD: Python + PostgreSQL, REST APIs, integration/middleware for an enterprise LMS.
+% Source: https://nz.seek.com/job/92081881
+
+\documentclass{resume}
+\usepackage{url}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\name{Jonathan Xu}
+
+\basicInfo{
+  \email{jonathanilc@hotmail.com} \textperiodcentered\
+  \phone{(+64) 21-026-24525} \textperiodcentered\
+  \linkedin[jonoxu]{https://www.linkedin.com/in/jonathan-x-4aba55115}}
+  \vspace{2em}
+
+\section*{Summary}
+Senior backend engineer with 10+ years of experience designing and operating integration and middleware systems between large enterprise platforms. At IDEXX, owns the SAP integration and billing pipeline that aggregates and reconciles data from 5k+ sites and 9k hospitals every month. Comfortable in Python, Go, and Node.js; works autonomously in distributed teams. NZ citizen / full working rights.
+
+\section{\faGraduationCap\ Education}
+\datedsubsection{\textbf{Unitec Institute of Technology}, Auckland, New Zealand}{2016 -- 2018}
+\textit{Bachelor of Computing Systems}
+
+
+\section{\faUsers\ Experience}
+\datedsubsection{\textbf{IDEXX}, Auckland, New Zealand}{2022 -- Present}
+\vspace{1em}
+\textbf{Senior Software Engineer – ezyVet Platform Team} \hfill \textit{2025 -- Present} \\
+Leading a backend refactor with an OpenAPI-driven REST API layer — standardising contracts across internal and external consumers.
+\begin{itemize}
+  \item Introduced OpenAPI as the source of truth for the API layer, enabling generated clients, contract testing, and consistent documentation across teams.
+  \item Migrated the codebase to a vertical-slice architecture aligned to integration boundaries, improving maintainability and reducing coupling between subsystems.
+  \item Delivered the migration incrementally while keeping the production billing pipeline operational.
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Senior Software Engineer – ezyVet Platform Team} \hfill \textit{2024 -- 2025} \\
+Designed and built the enterprise integration that connects the ezyVet billing pipeline to SAP for monthly invoicing — operating across 5k+ veterinary sites and 9k hospitals.
+\begin{itemize}
+  \item Owned the SAP integration layer end-to-end: schema mapping, idempotent delivery, retries, and reconciliation against source-of-truth data.
+  \item Built backend services for data aggregation, validation, and pipeline orchestration with strong observability and audit trails.
+  \item Worked across the wider project team and external vendors to align on contracts, edge cases, and cutover plans.
+  \item Shipped a self-service internal application (React/Vite) used by the billing team to configure and operate the pipeline.
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Senior Software Engineer – Vet Radar Team} \hfill \textit{2022 -- 2024} \\
+Delivered Vet Radar — Node.js services on ECS (Fargate) with a React client on S3.
+\begin{itemize}
+  \item Developed and maintained Node.js / Express services exposing RESTful APIs consumed by the client and partner systems.
+  \item Managed AWS infrastructure as code with Terraform across multiple services; improved deployment reliability and operational visibility.
+  \item Worked in a fully distributed team across regions, collaborating asynchronously on design and delivery.
+\end{itemize}
+
+\vspace{1em}
+
+\datedsubsection{\textbf{Moustache Republic}, Auckland, New Zealand}{2018 -- 2022}
+\vspace{1em}
+\textbf{Senior Software Engineer} \hfill \textit{2020 -- 2022} \\
+Delivered custom e-commerce integrations for clients on Shopify and BigCommerce — primarily connecting storefronts to third-party stock management and ERP systems.
+\begin{itemize}
+  \item Integrated Shopify with third-party stock management systems via REST APIs and webhooks, automating inventory and order flows.
+  \item Built middleware components and micro-frontend apps embedded in Shopify storefronts to expose client-specific functionality.
+  \item Conducted early-phase research and feasibility studies for new integrations across diverse vendor APIs.
+  \item Coached and mentored junior team members; wrote and maintained technical documentation.
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Software Engineer / DevOps Engineer} \hfill \textit{2018 -- 2020} \\
+Delivered custom e-commerce sites and drove automation.
+\begin{itemize}
+  \item Built API integrations and reusable middleware between Shopify storefronts and client back-office systems.
+  \item Automated the release process and CI/CD pipelines, reducing deploy time and enabling more frequent, reliable releases.
+  \item Wrote and maintained unit tests to protect critical integration paths.
+\end{itemize}
+
+
+\section{\faCogs\ Skills}
+\begin{itemize}[parsep=0.5ex]
+  \item Integration \& Middleware: REST APIs, OpenAPI / contract-first design, webhooks, message-driven pipelines, SAP integration, ERP / third-party vendor APIs
+  \item Languages: Python (Flask), Golang, Node.js, TypeScript, C\#/.NET Core
+  \item Databases: PostgreSQL, relational data modelling, schema migrations
+  \item Cloud \& Infra (AWS): ECS/Fargate, S3, Terraform, Docker
+  \item Architecture: microservices, vertical-slice / clean architecture, idempotent pipelines, observability
+  \item Ways of working: distributed / remote teams, autonomous delivery, stakeholder \& vendor communication, Agile
+\end{itemize}
+
+\section{\faHeartO\ Licenses \& Certifications}
+\begin{itemize}[parsep=0.5ex]
+  \item AWS Certified Solutions Architect – Professional
+  \item Professional Scrum Master I (PSM I)
+\end{itemize}
+
+
+\section{\faInfo\ Miscellaneous}
+\begin{itemize}[parsep=0.5ex]
+  \item GitHub: \url{https://github.com/Jonathanilc}
+  \item Languages: English – Fluent, Mandarin – Native speaker
+  \item Working rights: full New Zealand working rights
+\end{itemize}
+\end{document}
