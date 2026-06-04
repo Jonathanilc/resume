@@ -1,0 +1,64 @@
+% !TEX program = xelatex
+% Variant: IoT backend / distributed systems cover letter.
+% Sibling of variants/iot-backend/resume.tex — pair as one application.
+% Source: Sourced (NZ) — Senior Back-End Engineer, IoT connected platform for construction equipment.
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\definecolor{accent}{HTML}{0066CC}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+\pagenumbering{gobble}
+
+\begin{document}
+
+\begin{flushright}
+{\Large\textbf{Jonathan Xu}}\\[0.3em]
+\faEnvelope\ \href{mailto:jonathanilc@hotmail.com}{jonathanilc@hotmail.com} \\
+\faPhone\ (+64) 21-026-24525 \\
+\faLinkedin\ \href{https://www.linkedin.com/in/jonathan-x-4aba55115}{jonoxu}
+\end{flushright}
+
+\vspace{0.5em}
+
+\today
+
+\vspace{0.5em}
+
+Hiring Team \\
+Sourced \\
+New Zealand
+
+\vspace{0.5em}
+
+Dear Hiring Team,
+
+I am writing to apply for the Senior Back-End Engineer contract advertised through Sourced -- the connected IoT platform for managing construction equipment and asset fleets at scale. The brief reads like a description of the work I have been doing in production: scalable backend services, high data volume, microservices, and AWS, with Node.js at the centre. I am based in Auckland with full New Zealand working rights and am available for the six-month, fully remote engagement.
+
+For the past several years at IDEXX I have built and operated large-scale data systems. I designed the billing pipeline that aggregates and reconciles data from 5,000+ sites and 9,000 hospitals every month before syncing to SAP -- an idempotent, high-volume pipeline the business depends on each billing cycle, with reconciliation against source-of-truth data and careful handling of failure and retry. More recently I have led its refactor to a vertical-slice architecture with an OpenAPI-driven REST API, so contracts, clients, and documentation stay in sync across teams.
+
+My Node.js experience runs deepest from the Vet Radar team, where I built and maintained the Node.js/Express services behind the product -- containerised with Docker, running on ECS/Fargate, with the surrounding AWS footprint (S3, VPC, networking) managed as code in Terraform. I work comfortably across the full stack and across languages -- Go, Python, and C\#/.NET alongside JavaScript -- so transitioning fully into a Node.js platform is natural rather than a stretch.
+
+I am drawn to this role because it pairs genuine scale with real-world impact: equipment in the field, data arriving continuously, and systems that have to stay reliable for the customers tracking their fleets. That blend of distributed-systems engineering and tangible outcomes is exactly the kind of work I find most rewarding, and I would relish the chance to contribute to a platform growing internationally. I have spent most of my recent roles working remotely across regions, so I am well set up to deliver effectively within a distributed team.
+
+I would welcome the opportunity to discuss how my experience with Node.js, large-scale data systems, and AWS could contribute to this platform. Thank you for your consideration.
+
+\vspace{0.5em}
+
+Sincerely, \\
+Jonathan Xu
+
+\end{document}
