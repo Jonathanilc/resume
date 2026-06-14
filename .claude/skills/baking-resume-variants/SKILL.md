@@ -74,7 +74,7 @@ Kebab-case folder under `variants/`. Existing repo practice mixes **angle** name
 - Mirror an existing variant's preamble exactly; don't improvise package setup.
 
 ## Verify (no local xelatex on this machine)
-`xelatex`/`latexmk` are usually **not installed locally** — CI builds on push (artifact PDFs named `<variant>-<doctype>.pdf`). So verify statically:
+`xelatex`/`latexmk` are usually **not installed locally** — on push, CI (`.github/workflows/build-pdf.yml`) builds each variant as its own standalone job and uploads a per-variant artifact (named after the folder, e.g. `cupla-fullstack`, containing `resume.pdf` + `coverletter.pdf`). New `variants/<name>/` folders are auto-discovered. So verify statically:
 - `\begin{...}`/`\end{...}` counts balanced in each file.
 - No unescaped `& % #` in **body text** (scan body only — `%`-comment lines, including those with `--`, will false-positive in a naive grep); no stray `[...]` placeholders left in body.
 - If a toolchain IS present: `make variants` (or `xelatex variants/<name>/resume.tex` from repo root).

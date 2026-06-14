@@ -27,12 +27,12 @@ The baselines live at the repo root:
 ## How it works
 
 - Each `variants/<name>/*.tex` file is self-contained. It can `\documentclass{resume}` (for resumes) or `\documentclass{article}` (for cover letters) exactly like the baselines, because the LaTeX compiler runs from the repo root and finds `resume.cls`, `fontawesome.sty`, etc. there.
-- The GitHub Actions workflow at `../.github/workflows/build-pdf.yml` builds the baselines plus every variant on push.
-- The artifact (`resume-pdfs`) contains all PDFs, with variant PDFs renamed to `<variant>-<doctype>.pdf` so they're unambiguous:
-  - `resume.pdf`
-  - `coverletter.pdf`
-  - `backend-focused-resume.pdf`
-  - `backend-focused-coverletter.pdf`
+- The GitHub Actions workflow at `../.github/workflows/build-pdf.yml` builds the baseline and every variant as a **separate, standalone job** on push (discovered automatically — adding a `variants/<name>/` folder gives it its own job with no workflow edits). `fail-fast` is off, so a broken variant only fails its own job.
+- Each job uploads its **own artifact**, named after its target, containing that target's PDFs (so you download just the one you need instead of one big zip):
+  - `baseline` → `resume.pdf`, `coverletter.pdf`
+  - `backend-focused` → `resume.pdf`, `coverletter.pdf`
+  - `cupla-fullstack` → `resume.pdf`, `coverletter.pdf`
+  - …one artifact per `variants/<name>/`
 
 ## Creating a new variant
 

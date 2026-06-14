@@ -6,12 +6,41 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  # Discover the baseline + every variant folder at runtime and emit them as a
+  # build matrix, so adding a new variants/<name>/ folder automatically gets its
+  # own standalone build job + artifact with no workflow edits.
+  discover:
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set.outputs.matrix }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Build matrix of baseline + variants
+        id: set
+        run: |
+          # The baseline lives at the repo root; each variant in variants/<name>/.
+          # Each matrix entry: name (artifact name), files (.tex paths), outdir.
+          matrix=$(jq -nc '[{name:"baseline", files:"resume.tex coverletter.tex", outdir:"."}]')
+          shopt -s nullglob
+          for d in variants/*/; do
+            name=$(basename "$d")
+            files=$(printf '%s ' "$d"*.tex | xargs)
+            [ -z "$files" ] && continue
+            matrix=$(echo "$matrix" | jq -c --arg n "$name" --arg f "$files" --arg o "$d" \
+              '. + [{name:$n, files:$f, outdir:$o}]')
+          done
+          echo "matrix={\"include\":$matrix}" >> "$GITHUB_OUTPUT"
+          echo "Discovered build targets:"
+          echo "$matrix" | jq -r '.[].name'
+
+  # Pull the (large) TeX Live image exactly once per run and hand it to every
+  # build job as an artifact, instead of each matrix job pulling it itself.
+  # A cache keeps the pull from happening at all on repeat runs.
+  prepare-image:
+    runs-on: ubuntu-latest
+    steps:
       - name: Cache LaTeX Docker image
         id: latex-docker-cache
         uses: actions/cache@v4
@@ -19,64 +48,68 @@ jobs:
           path: /tmp/texlive-docker-cache
           key: latex-docker-${{ runner.os }}-texlive-full-latest
 
-      - name: Load or pull LaTeX Docker image
+      - name: Pull and save image if not cached
         run: |
-          if [ -f /tmp/texlive-docker-cache/texlive-full-latest.tar ]; then
-            echo "Loading Docker image from cache..."
-            docker load -i /tmp/texlive-docker-cache/texlive-full-latest.tar
-          else
+          if [ ! -f /tmp/texlive-docker-cache/texlive-full-latest.tar ]; then
             echo "Pulling Docker image (will be cached for next run)..."
             docker pull ghcr.io/xu-cheng/texlive-full:latest
             mkdir -p /tmp/texlive-docker-cache
             docker save ghcr.io/xu-cheng/texlive-full:latest -o /tmp/texlive-docker-cache/texlive-full-latest.tar
+          else
+            echo "Image tar already present from cache."
           fi
 
-      - name: Compile baseline resume and cover letter
-        uses: xu-cheng/latex-action@v3
+      - name: Upload image artifact for build jobs
+        uses: actions/upload-artifact@v4
         with:
-          root_file: |
-            resume.tex
-            coverletter.tex
-          latexmk_use_xelatex: true
+          name: texlive-image
+          path: /tmp/texlive-docker-cache/texlive-full-latest.tar
+          retention-days: 1
 
-      - name: Compile variants
+  # One standalone job per baseline/variant. fail-fast: false so a broken
+  # variant fails only its own job, not the others.
+  build:
+    needs: [discover, prepare-image]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.discover.outputs.matrix) }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download LaTeX Docker image
+        uses: actions/download-artifact@v4
+        with:
+          name: texlive-image
+          path: /tmp/texlive-image
+
+      - name: Load LaTeX Docker image
+        run: docker load -i /tmp/texlive-image/texlive-full-latest.tar
+
+      - name: Compile ${{ matrix.name }}
         run: |
-          shopt -s nullglob
-          variants=(variants/*/*.tex)
-          if [ ${#variants[@]} -eq 0 ]; then
-            echo "No variants found, skipping."
-            exit 0
-          fi
-          for v in "${variants[@]}"; do
-            variant_dir=$(dirname "$v")
-            echo "::group::Compiling $v"
+          mkdir -p output
+          for f in ${{ matrix.files }}; do
+            echo "::group::Compiling $f"
             docker run --rm \
               -v "$PWD:/workdir" \
               -w /workdir \
               ghcr.io/xu-cheng/texlive-full:latest \
-              latexmk -xelatex -output-directory="$variant_dir" -interaction=nonstopmode "$v"
+              latexmk -xelatex -output-directory="${{ matrix.outdir }}" -interaction=nonstopmode "$f"
             echo "::endgroup::"
           done
-
-      - name: Collect PDFs
-        run: |
-          mkdir -p output
-          [ -f resume.pdf ] && cp resume.pdf output/resume.pdf
-          [ -f coverletter.pdf ] && cp coverletter.pdf output/coverletter.pdf
-          shopt -s nullglob
-          for d in variants/*/; do
-            variant=$(basename "$d")
-            for pdf in "$d"*.pdf; do
-              [ -f "$pdf" ] || continue
-              doctype=$(basename "$pdf" .pdf)
-              cp "$pdf" "output/${variant}-${doctype}.pdf"
-            done
+          for f in ${{ matrix.files }}; do
+            base=$(basename "$f" .tex)
+            pdf="${{ matrix.outdir }}/$base.pdf"
+            [ -f "$pdf" ] && cp "$pdf" "output/$base.pdf"
           done
-          echo "Built PDFs:"
+          echo "Built PDFs for ${{ matrix.name }}:"
           ls -la output/
 
-      - name: Upload PDFs
+      - name: Upload ${{ matrix.name }} PDFs
         uses: actions/upload-artifact@v4
         with:
-          name: resume-pdfs
+          name: ${{ matrix.name }}
           path: output/*.pdf
+          if-no-files-found: error
