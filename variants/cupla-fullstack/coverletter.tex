@@ -1,0 +1,65 @@
+% !TEX program = xelatex
+% Variant: Cupla -- Full Stack Engineer contract cover letter.
+% Sibling of variants/cupla-fullstack/resume.tex -- pair as one application.
+% Source: Seek NZ. Part-time (~10 hrs/week), remote, 6 months min. Couples planning app.
+% Tone tuned to "intelligent, willing, sharp-edged" + autonomy + customer focus.
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\definecolor{accent}{HTML}{0066CC}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+\pagenumbering{gobble}
+
+\begin{document}
+
+\begin{flushright}
+{\Large\textbf{Jonathan Xu}}\\[0.3em]
+\faEnvelope\ \href{mailto:jonathanilc@hotmail.com}{jonathanilc@hotmail.com} \\
+\faPhone\ (+64) 21-026-24525 \\
+\faLinkedin\ \href{https://www.linkedin.com/in/jonathan-x-4aba55115}{jonoxu}
+\end{flushright}
+
+\vspace{0.5em}
+
+\today
+
+\vspace{0.5em}
+
+Hiring Team \\
+Cupla \\
+New Zealand
+
+\vspace{0.5em}
+
+Dear Erika and William,
+
+I am writing to apply for the part-time Full Stack Engineer contract at Cupla. The brief -- support and maintain the platform, investigate and resolve bugs and customer issues, and keep everything healthy and reliable -- describes the part of engineering I most enjoy and have spent years doing at scale. I am based in Auckland with full New Zealand working rights and am well set up for the roughly ten-hour-a-week remote engagement.
+
+For the past several years at IDEXX I have owned a Go billing platform end to end. I designed the pipeline that aggregates and reconciles data from 5,000+ sites and 9,000 hospitals every month before syncing to SAP, and -- just as importantly -- I keep it running: hunting down production data issues, making delivery idempotent, and reconciling against source-of-truth data so the business can trust the monthly invoice run. That backend sits on PostgreSQL and AWS, which lines up closely with Cupla's Go, Postgres, and AWS (ECS, RDS, Elasticache, S3) stack.
+
+What I think suits a small platform best is breadth with ownership. On the Vet Radar team I moved freely between a React client, Node.js/Express services on ECS/Fargate, and the AWS infrastructure underneath -- all managed as code in Terraform (I would be comfortable picking up Pulumi or CDK). When something breaks, I am happy to follow it wherever it leads, from a frontend symptom to a backend cause to an infrastructure misconfiguration, and to talk to the people affected while I do. I also lean on AI development tools day to day to move faster across an unfamiliar codebase.
+
+I will be straight about one thing: my hands-on work has been backend and web rather than native Kotlin or Swift. But the qualities the role asks for -- sharp, willing, autonomous, customer-focused -- are exactly how I work, and getting into unfamiliar mobile code to resolve a real user's issue is the kind of problem I would genuinely enjoy rather than avoid. I learn fastest when there is a concrete bug and a customer on the other end of it.
+
+Cupla being in the top 1\% of revenue-generating apps with half a million couples relying on it is the sort of real-world stakes that make support and reliability work satisfying. I would welcome the chance to discuss how I could help keep the platform sharp. Thank you for your consideration.
+
+\vspace{0.5em}
+
+Sincerely, \\
+Jonathan Xu
+
+\end{document}
