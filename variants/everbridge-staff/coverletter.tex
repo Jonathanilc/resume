@@ -1,0 +1,66 @@
+% !TEX program = xelatex
+% Variant: Everbridge -- Staff Software Engineer cover letter.
+% Sibling of variants/everbridge-staff/resume.tex -- pair as one application.
+% Source: https://www.linkedin.com/jobs/view/4423320851/
+% Angle: Staff-level full-stack React+Node+AWS, architecture/scale, AI-assisted,
+%        technology-agnostic; honest on Java; ties to Everbridge's "keep people safe" mission.
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\definecolor{accent}{HTML}{0066CC}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+\pagenumbering{gobble}
+
+\begin{document}
+
+\begin{flushright}
+{\Large\textbf{Jonathan Xu}}\\[0.3em]
+\faEnvelope\ \href{mailto:jonathanilc@hotmail.com}{jonathanilc@hotmail.com} \\
+\faPhone\ (+64) 21-026-24525 \\
+\faLinkedin\ \href{https://www.linkedin.com/in/jonathan-x-4aba55115}{jonoxu}
+\end{flushright}
+
+\vspace{0.5em}
+
+\today
+
+\vspace{0.5em}
+
+Hiring Team \\
+Everbridge \\
+Auckland, New Zealand
+
+\vspace{0.5em}
+
+Dear Hiring Team,
+
+I am writing to apply for the Staff Software Engineer role at Everbridge. Building and operating large-scale, full-stack applications and APIs on AWS -- React and Node.js front to back -- is exactly the work I have spent the past decade doing, and the mission behind it draws me in: software that helps keep people safe has to be reliable, and reliability under real load is what I care most about as an engineer. I am based in Auckland with full New Zealand working rights.
+
+My most direct match is the Vet Radar team at IDEXX, where I delivered the product across the full stack: a React client backed by Node.js/Express APIs, containerised with Docker and running on AWS (ECS/Fargate, S3), with the surrounding infrastructure managed as code in Terraform. I owned features end to end -- from the UI through the services to the infrastructure -- and kept the web application and APIs stable in production, which is the kind of complete-lifecycle ownership the role describes.
+
+At the staff level, the part of the job I am most eager to do is shape architecture and lift the whole team. I currently lead the re-architecture of IDEXX's enterprise billing platform -- a system aggregating and reconciling data from 5,000+ sites and 9,000 hospitals each month -- moving it to a vertical-slice design with an OpenAPI-driven REST API so contracts, clients, and documentation stay in sync across teams. Alongside the design work I lead code reviews, mentor engineers, and deliver large changes incrementally without disrupting a pipeline the business depends on every billing cycle.
+
+I will be straight about one thing in your stack: my statically-typed and enterprise work has been in C\#/.NET and Go rather than Java. But moving between languages is how I already work -- Go, Node, Python, and C\# all sit in my day-to-day -- so ramping on Java is a short step, and it fits the technology-agnostic, adaptable approach the role values. I also use agentic AI coding tools every day and have built AI into my development workflow, so the eagerness you are looking for around AI solutions is already how I operate rather than something I would be starting from scratch.
+
+I would welcome the chance to discuss how my full-stack, architecture, and AWS experience could contribute to systems that keep people safe. Thank you for your consideration.
+
+\vspace{0.5em}
+
+Sincerely, \\
+Jonathan Xu
+
+\end{document}

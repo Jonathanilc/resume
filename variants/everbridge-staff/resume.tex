@@ -1,0 +1,108 @@
+% !TEX program = xelatex
+% Variant: Everbridge -- Staff Software Engineer (Auckland, full-time, permanent).
+% Source: https://www.linkedin.com/jobs/view/4423320851/
+% Angle: Staff-level full-stack (React + Node.js) on AWS; architecture & scale,
+%        end-to-end ownership, code review/mentoring, technology-agnostic + AI-assisted.
+%        Honest on Java (has C#/.NET, Go, Node, Python). Auckland local (not contract).
+
+\documentclass{resume}
+\usepackage{url}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\name{Jonathan Xu}
+
+\basicInfo{
+  \email{jonathanilc@hotmail.com} \textperiodcentered\
+  \phone{(+64) 21-026-24525} \textperiodcentered\
+  \linkedin[jonoxu]{https://www.linkedin.com/in/jonathan-x-4aba55115}}
+  \vspace{2em}
+
+\section*{Summary}
+Senior Software Engineer with 10+ years building and operating large-scale, full-stack applications and APIs on AWS -- React and Node.js front to back, with Go, Python, and C\#/.NET across the stack. At IDEXX I lead architecture on an enterprise billing platform serving 5k+ sites and 9k hospitals, owning features end-to-end and driving scalability, clean architecture, and code quality across the team. Technology-agnostic by habit and an everyday user of AI-assisted / agentic coding tools. Auckland-based with full New Zealand working rights. AWS Certified Solutions Architect -- Professional.
+
+\section{\faGraduationCap\ Education}
+\datedsubsection{\textbf{Unitec Institute of Technology}, Auckland, New Zealand}{2016 -- 2018}
+\textit{Bachelor of Computing Systems}
+
+
+\section{\faUsers\ Experience}
+\datedsubsection{\textbf{IDEXX}, Auckland, New Zealand}{2022 -- Present}
+\vspace{1em}
+\textbf{Senior Software Engineer -- ezyVet Platform Team} \hfill \textit{2025 -- Present} \\
+Leading the architecture of an enterprise billing platform -- refactoring to a vertical-slice design with an OpenAPI-driven REST API -- and raising engineering standards across the team.
+\begin{itemize}
+  \item Drove architectural decisions to improve scalability and maintainability, migrating to a vertical slice architecture aligned to business domains.
+  \item Established OpenAPI as the contract source of truth, enabling generated clients, contract testing, and clearer cross-team APIs.
+  \item Lead code reviews and mentor engineers; delivered the migration incrementally with no downtime to the production pipeline.
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Senior Software Engineer -- ezyVet Platform Team} \hfill \textit{2024 -- 2025} \\
+Owned, end to end, a large-scale billing platform aggregating and reconciling data from 5k+ sites and 9k hospitals before syncing to SAP for monthly invoicing.
+\begin{itemize}
+  \item Built Go backend services for high-volume aggregation, validation, and pipeline orchestration; kept them reliable under real enterprise load.
+  \item Designed and shipped the React/TypeScript self-service application used by the billing team day to day.
+  \item Troubleshot and resolved production data issues; built idempotent delivery and reconciliation against source-of-truth data.
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Senior Software Engineer -- Vet Radar Team} \hfill \textit{2022 -- 2024} \\
+Delivered Vet Radar across the full stack -- a React client and Node.js/Express APIs on AWS (ECS/Fargate, S3).
+\begin{itemize}
+  \item Owned features end-to-end across the React (Context API) client and the Node.js/Express services powering the product.
+  \item Managed AWS infrastructure as code with Terraform (ECS/Fargate, S3, VPC, networking); improved deployment reliability and operational visibility.
+  \item Containerised services with Docker; troubleshot and maintained stable web-application and API operations.
+\end{itemize}
+
+\vspace{1em}
+
+\datedsubsection{\textbf{Moustache Republic}, Auckland, New Zealand}{2018 -- 2022}
+\vspace{1em}
+\textbf{Senior Software Engineer} \hfill \textit{2020 -- 2022} \\
+Delivered custom full-stack e-commerce solutions for clients on Shopify and BigCommerce.
+\begin{itemize}
+  \item Built full-stack features and micro-frontend apps embedded in client storefronts, collaborating cross-functionally with clients and designers.
+  \item Coached and mentored junior engineers through code review and technical guidance.
+  \item Conducted early-phase feasibility research for new features and integrations.
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Software Engineer / DevOps Engineer} \hfill \textit{2018 -- 2020} \\
+Delivered custom e-commerce sites; drove DevOps and automation.
+\begin{itemize}
+  \item Automated the release process and CI/CD pipelines, reducing deploy time and enabling more frequent, reliable releases.
+  \item Built reusable components and integrations used across client projects.
+  \item Wrote and maintained unit tests to protect critical paths and enable confident refactoring.
+\end{itemize}
+
+
+\section{\faCogs\ Skills}
+\begin{itemize}[parsep=0.5ex]
+  \item Full-Stack: React, Node.js, Express, JavaScript, TypeScript, HTML, CSS, Tailwind, Angular
+  \item Languages: JavaScript/TypeScript, Go, Python, C\#/.NET -- technology-agnostic, quick to adopt new languages (e.g. Java)
+  \item Cloud \& Infra (AWS): ECS/Fargate, S3, VPC, Terraform, Docker, Kubernetes
+  \item Architecture \& Scale: microservices, vertical-slice / clean architecture, OpenAPI-driven contracts, scalability \& performance
+  \item AI-Assisted Engineering: everyday use of agentic AI coding tools and AI-in-the-loop development workflows
+  \item APIs \& Data: RESTful APIs, GraphQL, SQL/PostgreSQL relational modelling, large-scale data pipelines
+  \item Best Practices: code review \& mentoring, SOLID, design patterns, TDD/unit testing, Agile delivery
+\end{itemize}
+
+\section{\faHeartO\ Licenses \& Certifications}
+\begin{itemize}[parsep=0.5ex]
+  \item AWS Certified Solutions Architect -- Professional
+  \item Professional Scrum Master I (PSM I)
+\end{itemize}
+
+
+\section{\faInfo\ Miscellaneous}
+\begin{itemize}[parsep=0.5ex]
+  \item GitHub: \url{https://github.com/Jonathanilc}
+  \item Auckland-based with full New Zealand working rights
+  \item Languages: English -- Fluent, Mandarin -- Native speaker
+\end{itemize}
+\end{document}
