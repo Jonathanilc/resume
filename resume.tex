@@ -17,7 +17,7 @@
   \vspace{2em}
 
 \section*{Summary}
-Senior Software Engineer with over 10 years of experience in full-stack development and cloud infrastructure. Delivered scalable billing and veterinary care systems at IDEXX—including a billing pipeline serving 5k+ sites and 9k hospitals with SAP integration—using Golang, React, and AWS. Proven leadership in cross-functional delivery and mentoring junior developers.
+Senior Software Engineer with 10+ years across backend development, cloud infrastructure, and platform engineering. On IDEXX's platform team I build the internal developer platform that takes services from Git to AWS—Go tooling, Kubernetes/Helm, Terraform, GitHub Actions, ArgoCD GitOps, and Datadog observability—and led the Go billing platform serving 5k+ sites and 9k hospitals with SAP integration. Strong full-stack range (React, Angular), with a track record of cross-functional delivery and mentoring. Auckland-based NZ citizen, eligible to work in Australia (Subclass 444).
 
 \section{\faGraduationCap\ Education}
 \datedsubsection{\textbf{Unitec Institute of Technology}, Auckland, New Zealand}{2016 -- 2018}
@@ -27,17 +27,19 @@ Senior Software Engineer with over 10 years of experience in full-stack developm
 \section{\faUsers\ Experience}
 \datedsubsection{\textbf{IDEXX}, Auckland, New Zealand}{2022 -- Present}
 \vspace{1em}
-\textbf{Senior Software Engineer – ezyVet Platform Team} \hfill \textit{2025 -- Present} \\
-Leading refactor of the billing system (Go): from horizontal to vertical sliced structure; API layer migration driven by OpenAPI spec.
+\textbf{Senior Software Engineer – VetSoft Platform Team} \hfill \textit{2025 -- Present} \\
+Platform engineering: building VetSoft Deploy (VSD), the internal developer platform that takes a service from Git repo to running on AWS, alongside modernizing the Go billing platform.
 \begin{itemize}
-  \item Migrated the codebase to a vertical slice architecture to improve maintainability and domain alignment.
-  \item Introduced OpenAPI specification for the API layer to standardize contracts and enable code generation and documentation.
-  \item Delivered the migration incrementally while keeping the existing billing pipeline operational.
+  \item Build and maintain VetSoft Deploy (VSD), an internal developer platform that standardizes how services ship to AWS—spanning a Go CLI, a webhook API, Helm charts, a Terraform module, and reusable GitHub Actions workflows.
+  \item Developed vetsoft-cli, a Go command-line tool (distributed as a Homebrew cask) that scaffolds and updates services, giving teams a self-service golden path to production.
+  \item Automated per-service AWS provisioning with Terraform—OIDC IAM roles and ECR repositories across all environments—managed from a source-of-truth monorepo.
+  \item Deploy services to Kubernetes (EKS) using Helm and ArgoCD GitOps, with Datadog for observability and operational visibility.
+  \item Led the Go billing platform refactor to a vertical-slice architecture with an OpenAPI-driven API layer, delivered incrementally with no disruption to the live pipeline.
 \end{itemize}
 
 \vspace{1em}
 
-\textbf{Senior Software Engineer – ezyVet Platform Team} \hfill \textit{2024 -- 2025} \\
+\textbf{Senior Software Engineer – VetSoft Platform Team} \hfill \textit{2024 -- 2025} \\
 Delivered the billing project: collect and calculate billing data from 5k+ sites and 9k hospitals, then sync to SAP to generate monthly invoices for clients.
 \begin{itemize}
   \item Designed and built the self-service client application (React, Tailwind, Vite) used by the billing team for billing operations and configuration.
@@ -84,11 +86,12 @@ Delivered custom e‑commerce sites on Shopify and BigCommerce; drove DevOps and
 
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
-  \item Frontend Tech: React, Angular, JavaScript, Typescript, HTML, CSS, Tailwind
-  \item Backend Tech: Golang, Node, Python, Flask, C\#, .NET Core, Restful APIs, GraphQL
-  \item Architecture \& Design: Microservices, clean architecture, cloud-native builds (AWS)
-  \item DevOps \& CI/CD: Docker, Kubernetes, Terraform, Git, CI/CD pipelines
-  \item Best Practices: SOLID principles, design patterns, clean code, TDD/unit testing, Agile delivery
+  \item Cloud \& Platform: AWS (ECS/Fargate, S3, ECR, VPC, OIDC/IAM), Kubernetes (EKS), Helm, internal developer platforms
+  \item DevOps \& CI/CD: Terraform, ArgoCD (GitOps), GitHub Actions, GitLab CI, Docker, Datadog, Git
+  \item Backend: Golang, Node.js, Python, Flask, C\#, .NET Core, REST/OpenAPI, GraphQL
+  \item Architecture: Microservices, clean \& vertical-slice architecture, OpenAPI contracts, cloud-native
+  \item Frontend: React, Angular, TypeScript, JavaScript, HTML, CSS, Tailwind
+  \item Best Practices: SOLID, design patterns, clean code, TDD/unit testing, Agile, mentoring \& code review
 \end{itemize}
 
 \section{\faHeartO\ Licenses \& Certifications}
@@ -100,6 +103,7 @@ Delivered custom e‑commerce sites on Shopify and BigCommerce; drove DevOps and
 
 \section{\faInfo\ Miscellaneous}
 \begin{itemize}[parsep=0.5ex]
+  \item Work eligibility: NZ citizen, eligible to work in Australia (Subclass 444 SCV)
   \item GitHub: \url{https://github.com/Jonathanilc}
   \item Languages: English – Fluent, Mandarin – Native speaker
 \end{itemize}

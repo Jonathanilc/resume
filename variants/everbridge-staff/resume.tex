@@ -30,17 +30,19 @@ Senior Software Engineer with 10+ years building and operating large-scale, full
 \section{\faUsers\ Experience}
 \datedsubsection{\textbf{IDEXX}, Auckland, New Zealand}{2022 -- Present}
 \vspace{1em}
-\textbf{Senior Software Engineer -- ezyVet Platform Team} \hfill \textit{2025 -- Present} \\
+\textbf{Senior Software Engineer -- VetSoft Platform Team} \hfill \textit{2025 -- Present} \\
 Leading the architecture of an enterprise billing platform -- refactoring to a vertical-slice design with an OpenAPI-driven REST API -- and raising engineering standards across the team.
 \begin{itemize}
   \item Drove architectural decisions to improve scalability and maintainability, migrating to a vertical slice architecture aligned to business domains.
   \item Established OpenAPI as the contract source of truth, enabling generated clients, contract testing, and clearer cross-team APIs.
   \item Lead code reviews and mentor engineers; delivered the migration incrementally with no downtime to the production pipeline.
+  \item Architected and built VetSoft Deploy (VSD), an internal developer platform that standardizes how services ship to AWS: a Go CLI, Helm charts, a Terraform module, and reusable GitHub Actions workflows.
+  \item Deploy services to Kubernetes (EKS) with Helm and ArgoCD GitOps and Datadog observability; provision per-service OIDC IAM roles and ECR repositories with Terraform.
 \end{itemize}
 
 \vspace{1em}
 
-\textbf{Senior Software Engineer -- ezyVet Platform Team} \hfill \textit{2024 -- 2025} \\
+\textbf{Senior Software Engineer -- VetSoft Platform Team} \hfill \textit{2024 -- 2025} \\
 Owned, end to end, a large-scale billing platform aggregating and reconciling data from 5k+ sites and 9k hospitals before syncing to SAP for monthly invoicing.
 \begin{itemize}
   \item Built Go backend services for high-volume aggregation, validation, and pipeline orchestration; kept them reliable under real enterprise load.
@@ -85,8 +87,8 @@ Delivered custom e-commerce sites; drove DevOps and automation.
 \begin{itemize}[parsep=0.5ex]
   \item Full-Stack: React, Node.js, Express, JavaScript, TypeScript, HTML, CSS, Tailwind, Angular
   \item Languages: JavaScript/TypeScript, Go, Python, C\#/.NET -- technology-agnostic, quick to adopt new languages (e.g. Java)
-  \item Cloud \& Infra (AWS): ECS/Fargate, S3, VPC, Terraform, Docker, Kubernetes
-  \item Architecture \& Scale: microservices, vertical-slice / clean architecture, OpenAPI-driven contracts, scalability \& performance
+  \item Cloud \& Infra (AWS): ECS/Fargate, S3, VPC, ECR, Kubernetes (EKS), Helm, Terraform, Docker, ArgoCD (GitOps), Datadog, GitHub Actions
+  \item Architecture \& Scale: microservices, vertical-slice / clean architecture, internal developer platforms (IDP), OpenAPI-driven contracts, scalability \& performance
   \item AI-Assisted Engineering: everyday use of agentic AI coding tools and AI-in-the-loop development workflows
   \item APIs \& Data: RESTful APIs, GraphQL, SQL/PostgreSQL relational modelling, large-scale data pipelines
   \item Best Practices: code review \& mentoring, SOLID, design patterns, TDD/unit testing, Agile delivery

@@ -43,8 +43,8 @@ Education & certs:
 
 Experience (fixed timeline & employers):
 - **IDEXX**, Auckland — 2022–Present
-  - Senior SWE, ezyVet Platform Team (2025–Present): leading refactor of the **Go** billing platform from horizontal to vertical-slice architecture; OpenAPI-driven REST API layer.
-  - Senior SWE, ezyVet Platform Team (2024–2025): designed/built high-volume **Go** billing pipeline aggregating & reconciling data from **5k+ sites and 9k hospitals**, syncing to **SAP** for monthly invoicing; built the React/Tailwind/Vite self-service app for the billing team; owned SAP integration; SQL relational modelling.
+  - Senior SWE, **VetSoft Platform Team** (2025–Present): platform engineering — builds **VetSoft Deploy (VSD)**, an internal developer platform that ships a service from Git repo to running on AWS. Spans a **Go** CLI (`vetsoft-cli`, distributed as a Homebrew cask), a webhook API (Go), **Helm** charts, a **Terraform** module, and reusable **GitHub Actions** workflows; provisions per-service **OIDC IAM** roles + **ECR** repos via Terraform; deploys to **Kubernetes (EKS)** via Helm + **ArgoCD** GitOps, with **Datadog** observability. Authored the VSD ecosystem guide. Also leads the **Go** billing platform refactor to vertical-slice architecture with an OpenAPI-driven REST API layer.
+  - Senior SWE, **VetSoft Platform Team** (2024–2025): designed/built high-volume **Go** billing pipeline aggregating & reconciling data from **5k+ sites and 9k hospitals**, syncing to **SAP** for monthly invoicing; built the React/Tailwind/Vite self-service app for the billing team; owned SAP integration; SQL relational modelling.
   - Senior SWE, Vet Radar Team (2022–2024): full-stack JS — **Node.js/Express** services on **ECS (Fargate)**, **React** (Context API) client on **S3**; AWS IaC with **Terraform**; **Docker**.
 - **Moustache Republic**, Auckland — 2018–2022
   - Senior SWE (2020–2022): e-commerce on Shopify/BigCommerce; Shopify↔stock/ERP integrations; micro-frontends; mentoring; tech docs.
@@ -62,7 +62,7 @@ Real skill inventory (draw from these — reorder to fit the JD):
 ## Honesty rule (do not skip)
 Tailor by **reordering and reframing real experience**, never by inventing it. Known gaps to NOT fabricate:
 - No hands-on **native mobile** (Kotlin/Swift).
-- Not demonstrated hands-on: **Redis/Elasticache**, **Pulumi/CDK**, observability stacks (**Grafana/Prometheus/Loki/Tempo/Posthog**).
+- Not demonstrated hands-on: **Redis/Elasticache**, **Pulumi/CDK**, observability stacks **other than Datadog** (**Grafana/Prometheus/Loki/Tempo/Posthog**). NOW hands-on via the VetSoft Platform role: **Datadog** (observability), **ArgoCD** (GitOps), **Helm**, **Kubernetes/EKS**, **ECR**, **OIDC/IAM** — these are no longer gaps.
 - Frame these as transferable/adoptable, not as held experience: "Terraform (comfortable adopting Pulumi/CDK)", "operational visibility / monitoring" rather than naming tools he hasn't used. When a JD's core requirement is a real gap, name it plainly in the cover letter and pivot to willingness + transferable strength.
 
 ## Naming

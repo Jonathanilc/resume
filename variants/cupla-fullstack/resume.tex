@@ -30,17 +30,19 @@ Senior Full-Stack Engineer with 10+ years building, operating, and maintaining p
 \section{\faUsers\ Experience}
 \datedsubsection{\textbf{IDEXX}, Auckland, New Zealand}{2022 -- Present}
 \vspace{1em}
-\textbf{Senior Software Engineer -- ezyVet Platform Team} \hfill \textit{2025 -- Present} \\
+\textbf{Senior Software Engineer -- VetSoft Platform Team} \hfill \textit{2025 -- Present} \\
 Leading a refactor of the Go billing platform to a vertical-slice architecture with an OpenAPI-driven REST API layer.
 \begin{itemize}
   \item Migrated the codebase to vertical slice architecture for domain alignment and long-term maintainability.
   \item Introduced OpenAPI as the source of truth for the API layer, enabling generated clients and contract testing.
   \item Delivered the migration incrementally while keeping the production pipeline fully operational throughout.
+  \item Build, operate, and maintain VetSoft Deploy (VSD), an internal developer platform that standardizes how services ship to AWS: a Go CLI, Helm charts, a Terraform module, and reusable GitHub Actions workflows.
+  \item Deploy services to Kubernetes (EKS) with Helm and ArgoCD GitOps and Datadog observability; provision per-service OIDC IAM roles and ECR repositories with Terraform.
 \end{itemize}
 
 \vspace{1em}
 
-\textbf{Senior Software Engineer -- ezyVet Platform Team} \hfill \textit{2024 -- 2025} \\
+\textbf{Senior Software Engineer -- VetSoft Platform Team} \hfill \textit{2024 -- 2025} \\
 Designed, built, and operate a high-volume Go billing pipeline aggregating and reconciling data from 5k+ sites and 9k hospitals, then syncing to SAP for monthly invoicing.
 \begin{itemize}
   \item Built Go backend services for data aggregation, validation, and pipeline orchestration; kept them reliable under real billing load.
@@ -85,8 +87,8 @@ Delivered custom e-commerce sites; drove DevOps and automation.
 \begin{itemize}[parsep=0.5ex]
   \item Backend: Golang, Node.js, Python, JavaScript, TypeScript, C\#, .NET Core, RESTful APIs, GraphQL
   \item Data: PostgreSQL / SQL relational modelling, caching, large-scale data pipelines, aggregation \& reconciliation
-  \item Cloud \& Infra (AWS): ECS/Fargate, RDS, S3, VPC, Elasticache; infrastructure as code (Terraform; comfortable adopting Pulumi/CDK)
-  \item Reliability \& Ops: full-stack debugging, monitoring \& operational visibility, incident handling, idempotent/resilient pipelines
+  \item Cloud \& Infra (AWS): ECS/Fargate, RDS, S3, VPC, Elasticache, ECR, Kubernetes (EKS), Helm; infrastructure as code (Terraform; comfortable adopting Pulumi/CDK); ArgoCD (GitOps), GitHub Actions
+  \item Reliability \& Ops: full-stack debugging, Datadog monitoring \& operational visibility, incident handling, idempotent/resilient pipelines
   \item Architecture \& Design: microservices, vertical-slice / clean architecture, OpenAPI-driven contracts
   \item Best Practices: SOLID, TDD/unit testing, Agile delivery, code review \& mentoring; comfortable with AI-assisted development tools
   \item Frontend: React, HTML, CSS, Tailwind

@@ -28,17 +28,19 @@ Senior Backend Engineer with 10+ years of experience designing and operating pro
 \section{\faUsers\ Experience}
 \datedsubsection{\textbf{IDEXX}, Auckland, New Zealand}{2022 -- Present}
 \vspace{1em}
-\textbf{Senior Software Engineer – ezyVet Platform Team} \hfill \textit{2025 -- Present} \\
+\textbf{Senior Software Engineer – VetSoft Platform Team} \hfill \textit{2025 -- Present} \\
 Leading a Go billing system refactor: horizontal to vertical-slice architecture, with an OpenAPI-driven API layer.
 \begin{itemize}
   \item Migrated the Go codebase to vertical slice architecture for domain alignment and maintainability.
   \item Introduced OpenAPI as the source of truth for the API layer, enabling generated clients and contract testing.
   \item Delivered the migration incrementally while keeping the production billing pipeline operational.
+  \item Build and maintain VetSoft Deploy (VSD), an internal developer platform that standardizes how services ship to AWS: a Go CLI, Helm charts, a Terraform module, and reusable GitHub Actions workflows.
+  \item Deploy services to Kubernetes (EKS) with Helm and ArgoCD GitOps and Datadog observability; provision per-service OIDC IAM roles and ECR repositories with Terraform.
 \end{itemize}
 
 \vspace{1em}
 
-\textbf{Senior Software Engineer – ezyVet Platform Team} \hfill \textit{2024 -- 2025} \\
+\textbf{Senior Software Engineer – VetSoft Platform Team} \hfill \textit{2024 -- 2025} \\
 Designed and built the billing pipeline that aggregates and reconciles data from 5k+ sites and 9k hospitals and syncs it to SAP for monthly invoicing.
 \begin{itemize}
   \item Built Go backend services for data aggregation, validation, and pipeline orchestration.
@@ -82,9 +84,9 @@ Delivered custom e‑commerce sites; drove DevOps and automation.
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
   \item Backend: Golang, Node.js, Python, Flask, C\#, .NET Core, RESTful APIs, GraphQL
-  \item Cloud \& Infra (AWS): ECS/Fargate, S3, Terraform, Docker, Kubernetes
-  \item Architecture \& Design: microservices, vertical-slice / clean architecture, OpenAPI-driven contracts, SAP integration
-  \item DevOps \& CI/CD: GitHub Actions, GitLab CI, automated release pipelines
+  \item Cloud \& Infra (AWS): ECS/Fargate, S3, ECR, OIDC/IAM, Kubernetes (EKS), Helm, Terraform, Docker
+  \item Architecture \& Design: microservices, vertical-slice / clean architecture, OpenAPI-driven contracts, internal developer platforms, SAP integration
+  \item DevOps \& CI/CD: GitHub Actions, GitLab CI, ArgoCD (GitOps), Datadog, automated release pipelines
   \item Best Practices: SOLID, design patterns, TDD/unit testing, Agile delivery
   \item Frontend (working knowledge): React, TypeScript, Tailwind
 \end{itemize}

@@ -28,17 +28,19 @@ Senior backend engineer with 10+ years of experience designing and operating int
 \section{\faUsers\ Experience}
 \datedsubsection{\textbf{IDEXX}, Auckland, New Zealand}{2022 -- Present}
 \vspace{1em}
-\textbf{Senior Software Engineer – ezyVet Platform Team} \hfill \textit{2025 -- Present} \\
+\textbf{Senior Software Engineer – VetSoft Platform Team} \hfill \textit{2025 -- Present} \\
 Leading a backend refactor with an OpenAPI-driven REST API layer — standardising contracts across internal and external consumers.
 \begin{itemize}
   \item Introduced OpenAPI as the source of truth for the API layer, enabling generated clients, contract testing, and consistent documentation across teams.
   \item Migrated the codebase to a vertical-slice architecture aligned to integration boundaries, improving maintainability and reducing coupling between subsystems.
   \item Delivered the migration incrementally while keeping the production billing pipeline operational.
+  \item Build and maintain VetSoft Deploy (VSD), an internal developer platform that standardizes how services ship to AWS: a Go CLI, Helm charts, a Terraform module, and reusable GitHub Actions workflows.
+  \item Deploy services to Kubernetes (EKS) with Helm and ArgoCD GitOps and Datadog observability; provision per-service OIDC IAM roles and ECR repositories with Terraform.
 \end{itemize}
 
 \vspace{1em}
 
-\textbf{Senior Software Engineer – ezyVet Platform Team} \hfill \textit{2024 -- 2025} \\
+\textbf{Senior Software Engineer – VetSoft Platform Team} \hfill \textit{2024 -- 2025} \\
 Designed and built the enterprise integration that connects the ezyVet billing pipeline to SAP for monthly invoicing — operating across 5k+ veterinary sites and 9k hospitals.
 \begin{itemize}
   \item Owned the SAP integration layer end-to-end: schema mapping, idempotent delivery, retries, and reconciliation against source-of-truth data.
@@ -86,7 +88,7 @@ Delivered custom e-commerce sites and drove automation.
   \item Integration \& Middleware: REST APIs, OpenAPI / contract-first design, webhooks, message-driven pipelines, SAP integration, ERP / third-party vendor APIs
   \item Languages: Python (Flask), Golang, Node.js, TypeScript, C\#/.NET Core
   \item Databases: PostgreSQL, relational data modelling, schema migrations
-  \item Cloud \& Infra (AWS): ECS/Fargate, S3, Terraform, Docker
+  \item Cloud \& Infra (AWS): ECS/Fargate, S3, ECR, Kubernetes (EKS), Helm, Terraform, Docker; GitHub Actions, ArgoCD (GitOps), Datadog
   \item Architecture: microservices, vertical-slice / clean architecture, idempotent pipelines, observability
   \item Ways of working: distributed / remote teams, autonomous delivery, stakeholder \& vendor communication, Agile
 \end{itemize}
