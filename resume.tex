@@ -4,16 +4,29 @@
 %\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{url}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{1F3A5F}
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+% accent-coloured section headers + rule (baseline only)
+\titleformat{\section}
+  {\Large\scshape\raggedright\color{accent}}
+  {}{0em}
+  {}
+  [{\color{accent}\titlerule}]
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{Jonathan Xu}
+\name{\textcolor{accent}{Jonathan Xu}}
+\vspace{-0.3ex}
+\centerline{\large\itshape\textcolor{accent}{Senior Software Engineer \textperiodcentered\ Platform \& Cloud Engineering}}
+\vspace{0.9ex}
 
 \basicInfo{
   \email{jonathanilc@hotmail.com} \textperiodcentered\ 
   \phone{(+64) 21-026-24525} \textperiodcentered\ 
-  \linkedin[jonoxu]{https://www.linkedin.com/in/jonathan-x-4aba55115}}
+  \linkedin[jonoxu]{https://www.linkedin.com/in/jonathan-x-4aba55115}
+  \textperiodcentered\ \github[Jonathanilc]{https://github.com/Jonathanilc}}
   \vspace{2em}
 
 \section*{Summary}
@@ -77,12 +90,12 @@ Delivered custom e-commerce sites on Shopify and BigCommerce; drove DevOps and a
 
 \section{\faCogs\ Skills}
 \begin{itemize}[parsep=0.5ex]
-  \item Cloud \& Platform: AWS (ECS/Fargate, S3, ECR, VPC, OIDC/IAM), Kubernetes (EKS), Helm, internal developer platforms
-  \item DevOps \& CI/CD: Terraform, ArgoCD (GitOps), GitHub Actions, GitLab CI, Docker, Datadog, Git
-  \item Backend: Golang, Node.js, Python, Flask, C\#, .NET Core, REST/OpenAPI, GraphQL
-  \item Architecture: Microservices, clean \& vertical-slice architecture, OpenAPI contracts, cloud-native
-  \item Frontend: React, Angular, TypeScript, JavaScript, HTML, CSS, Tailwind
-  \item Best Practices: SOLID, design patterns, clean code, TDD/unit testing, Agile, mentoring \& code review
+  \item \textbf{Cloud \& Platform:} AWS (ECS/Fargate, S3, ECR, VPC, OIDC/IAM), Kubernetes (EKS), Helm, internal developer platforms
+  \item \textbf{DevOps \& CI/CD:} Terraform, ArgoCD (GitOps), GitHub Actions, GitLab CI, Docker, Datadog, Git
+  \item \textbf{Backend:} Golang, Node.js, Python, Flask, C\#, .NET Core, REST/OpenAPI, GraphQL
+  \item \textbf{Architecture:} Microservices, clean \& vertical-slice architecture, OpenAPI contracts, cloud-native
+  \item \textbf{Frontend:} React, Angular, TypeScript, JavaScript, HTML, CSS, Tailwind
+  \item \textbf{Best Practices:} SOLID, design patterns, clean code, TDD/unit testing, Agile, mentoring \& code review
 \end{itemize}
 
 \section{\faGraduationCap\ Education}
@@ -99,7 +112,6 @@ Delivered custom e-commerce sites on Shopify and BigCommerce; drove DevOps and a
 \section{\faInfo\ Miscellaneous}
 \begin{itemize}[parsep=0.5ex]
   \item Work eligibility: NZ citizen, eligible to work in Australia (Subclass 444 SCV)
-  \item GitHub: \url{https://github.com/Jonathanilc}
   \item Languages: English – Fluent, Mandarin – Native speaker
 \end{itemize}
 \end{document}
