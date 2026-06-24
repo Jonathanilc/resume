@@ -1,0 +1,125 @@
+% !TEX program = xelatex
+% Variant: Dave Clark Design -- Full-Stack Engineer (4-month initial contract).
+% Source: pasted JD (no URL); via recruiter Alex. Company: https://www.daveclarkdesign.com/en-nz/
+% Angle: lead with React + Node.js/TypeScript + AWS + REST on SaaS product builds;
+%        surface enterprise-scale SaaS (billing platform, Vet Radar) for big-business clients
+%        (banks, finservices, large tech). Auckland-based, contract availability surfaced.
+% Design: merged with latest baseline (deep-navy accent, role tagline, GitHub in header,
+%        accent section headers, colored links, bold skill labels).
+% Honest: serverless specifics (Lambda, API Gateway, DynamoDB, Serverless Framework) are
+%        Solutions Architect -- Professional breadth, not hands-on (hands-on AWS is ECS/Fargate,
+%        S3, VPC, ECR, IAM/OIDC). mTLS / ECDH-ECDSA crypto intentionally not raised (candidate
+%        preference); resume keeps a truthful Security line (IAM/OIDC, TLS, secure SAP integration).
+
+\documentclass{resume}
+\usepackage{url}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{1F3A5F}
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+% accent-coloured section headers + rule (merged from baseline)
+\titleformat{\section}
+  {\Large\scshape\raggedright\color{accent}}
+  {}{0em}
+  {}
+  [{\color{accent}\titlerule}]
+
+\begin{document}
+\pagenumbering{gobble}
+
+\name{\textcolor{accent}{Jonathan Xu}}
+\vspace{-0.3ex}
+\centerline{\large\itshape\textcolor{accent}{Senior Software Engineer \textperiodcentered\ Full-Stack \& SaaS Product}}
+\vspace{0.9ex}
+
+\basicInfo{
+  \email{jono\_x@icloud.com} \textperiodcentered\
+  \phone{(+64) 21-026-24525} \textperiodcentered\
+  \linkedin[jonoxu]{https://www.linkedin.com/in/jonathan-x-4aba55115}
+  \textperiodcentered\ \github[Jonathanilc]{https://github.com/Jonathanilc}}
+  \vspace{2em}
+
+\section*{Summary}
+Senior Full-Stack Engineer with 10+ years building and operating SaaS products on AWS, with React and Node.js/TypeScript at the centre alongside Go and Python. At IDEXX I design, ship, and run product platforms the business depends on -- a billing platform serving 5k+ sites and 9k hospitals with SAP integration, and the Vet Radar product across a React client and Node.js services on AWS -- behind REST / OpenAPI-driven APIs. I enjoy moving across the full stack and bringing ideas to product builds for demanding clients. Auckland-based with full New Zealand working rights, available for the 4-month initial contract. AWS Certified Solutions Architect -- Professional.
+
+\section{\faUsers\ Experience}
+\datedsubsection{\textbf{IDEXX}, Auckland, New Zealand}{2022 -- Present}
+\vspace{1em}
+\textbf{Senior Software Engineer -- VetSoft Platform Team} \hfill \textit{2025 -- Present} \\
+Building VetSoft Deploy (VSD) -- the internal platform that automates shipping product services to AWS -- and leading the billing platform's refactor to a vertical-slice architecture behind an OpenAPI-driven REST API.
+\begin{itemize}
+  \item Build and maintain VetSoft Deploy (VSD), an internal developer platform that takes a service from Git to running on AWS, giving product teams a self-service path to production.
+  \item Automate AWS provisioning as code with Terraform (per-service IAM/OIDC roles and ECR repositories) and reusable GitHub Actions CI/CD workflows, removing manual setup and standardising how teams ship.
+  \item Built the supporting webhook API and a CLI (distributed as a Homebrew cask) that scaffold, configure, and deploy services for engineers across the organisation.
+  \item Introduced OpenAPI as the single source of truth for the billing REST API -- generated clients, contract testing, and docs that stay in sync -- with GitOps-based deploys and Datadog observability throughout.
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Senior Software Engineer -- VetSoft Platform Team} \hfill \textit{2024 -- 2025} \\
+Designed, built, and operate a high-volume billing platform aggregating and reconciling data from 5k+ sites and 9k hospitals, then syncing to SAP for monthly invoicing.
+\begin{itemize}
+  \item Designed and shipped the self-service client application (React, Tailwind, Vite) used by the billing team for operations and configuration.
+  \item Built backend services for data aggregation, validation, and pipeline orchestration; kept them reliable under real billing load.
+  \item Owned the secure SAP integration layer, ensuring reliable, idempotent data delivery for the monthly invoice run.
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Senior Software Engineer -- Vet Radar Team} \hfill \textit{2022 -- 2024} \\
+Delivered Vet Radar, a full-stack SaaS product -- React (TypeScript) client hosted on S3, Node.js/Express services on AWS ECS (Fargate).
+\begin{itemize}
+  \item Owned the client-side application (React, TypeScript, Context API), shipping core product features end to end.
+  \item Built and maintained the Node.js/Express services and REST APIs powering the product, containerised with Docker on ECS/Fargate.
+  \item Managed the AWS footprint (S3, VPC, networking) as code with Terraform; improved deployment reliability and operational visibility.
+\end{itemize}
+
+\vspace{1em}
+
+\datedsubsection{\textbf{Moustache Republic}, Auckland, New Zealand}{2018 -- 2022}
+\vspace{1em}
+\textbf{Senior Software Engineer} \hfill \textit{2020 -- 2022} \\
+Delivered custom commerce solutions and product integrations for clients on Shopify and BigCommerce.
+\begin{itemize}
+  \item Built React-based micro-frontend apps embedded in client storefronts, enabling client-specific functionality.
+  \item Integrated storefronts with third-party stock-management and ERP systems over REST APIs to streamline inventory and order flows.
+  \item Coached and mentored junior engineers through code review and technical guidance.
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Software Engineer / DevOps Engineer} \hfill \textit{2018 -- 2020} \\
+Delivered custom commerce sites; drove DevOps and automation.
+\begin{itemize}
+  \item Automated the release process and CI/CD pipelines, reducing deploy time and enabling more frequent, reliable releases.
+  \item Built reusable frontend components and backend integrations across client projects.
+\end{itemize}
+
+
+\section{\faCogs\ Skills}
+\begin{itemize}[parsep=0.5ex]
+  \item \textbf{Frontend:} React, TypeScript, JavaScript, HTML, CSS, Tailwind
+  \item \textbf{Backend:} Node.js, RESTful APIs / OpenAPI, Golang, Python, C\#/.NET Core, GraphQL
+  \item \textbf{Cloud (AWS):} hands-on with S3, ECS/Fargate, VPC, ECR, IAM/OIDC; serverless \& event-driven breadth (Lambda, API Gateway, DynamoDB, SNS/SQS, CloudFront, Serverless Framework) as AWS Solutions Architect -- Professional
+  \item \textbf{Architecture:} SaaS product platforms, microservices, event-driven \& serverless patterns, REST/OpenAPI contracts, clean / vertical-slice architecture
+  \item \textbf{DevOps \& CI/CD:} Terraform, GitHub Actions, Docker, Kubernetes (EKS) / Helm, ArgoCD, Datadog, Git
+  \item \textbf{Security:} IAM/OIDC, TLS, secure third-party API integrations (SAP)
+  \item \textbf{Practices:} SOLID, TDD/unit testing, Agile delivery, code review \& mentoring; comfortable with AI-assisted development tools
+\end{itemize}
+
+\section{\faGraduationCap\ Education}
+\datedsubsection{\textbf{Unitec Institute of Technology}, Auckland, New Zealand}{2016 -- 2018}
+\textit{Bachelor of Computing Systems}
+
+\section{\faHeartO\ Licenses \& Certifications}
+\begin{itemize}[parsep=0.5ex]
+  \item AWS Certified Solutions Architect -- Professional
+  \item Professional Scrum Master I (PSM I)
+\end{itemize}
+
+
+\section{\faInfo\ Miscellaneous}
+\begin{itemize}[parsep=0.5ex]
+  \item Auckland-based with full New Zealand working rights; available for the 4-month initial contract
+  \item Languages: English -- Fluent, Mandarin -- Native speaker
+\end{itemize}
+\end{document}

@@ -1,0 +1,64 @@
+% !TEX program = xelatex
+% Variant: Dave Clark Design -- Full-Stack Engineer (4-month contract) cover letter.
+% Sibling of variants/dave-clark-saas/resume.tex -- pair as one application.
+% Source: pasted JD (no URL); via recruiter Alex. Company: https://www.daveclarkdesign.com/en-nz/
+% Tone: warm, ideas-driven, product-focused. Honest on serverless-specifics (container-based, not Lambda).
+% Note: crypto (mTLS/ECDH-ECDSA) intentionally not addressed, per candidate preference.
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\definecolor{accent}{HTML}{0066CC}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+\pagenumbering{gobble}
+
+\begin{document}
+
+\begin{flushright}
+{\Large\textbf{Jonathan Xu}}\\[0.3em]
+\faEnvelope\ \href{mailto:jono_x@icloud.com}{jono\_x@icloud.com} \\
+\faPhone\ (+64) 21-026-24525 \\
+\faLinkedin\ \href{https://www.linkedin.com/in/jonathan-x-4aba55115}{jonoxu}
+\end{flushright}
+
+\vspace{0.5em}
+
+\today
+
+\vspace{0.5em}
+
+Alex \\
+Dave Clark Design \\
+Auckland, New Zealand
+
+\vspace{0.5em}
+
+Dear Alex,
+
+Thanks for the introduction -- it was lovely to chat. I would like to put myself forward for the Full-Stack Engineer role at Dave Clark Design on the four-month initial contract. The brief lines up closely with the work I have been doing in production: React on the front end, Node.js and TypeScript services, and AWS underneath, all behind REST APIs. I am Auckland-based with full New Zealand working rights and happy to be on site at Victoria Street West a couple of days a week.
+
+What drew me in is that Dave Clark builds genuine SaaS and product, not small CMS work, for big businesses with long-standing relationships. That is the kind of engineering I do at IDEXX. I designed and operate a billing platform that aggregates and reconciles data from 5,000+ sites and 9,000 hospitals every month before syncing securely to SAP for invoicing, and I recently led its refactor to a vertical-slice architecture with an OpenAPI-driven REST API so contracts, clients, and documentation stay in sync across teams. Alongside it I shipped the React self-service application the billing team uses day to day.
+
+My full-stack and React/Node.js experience runs deepest from the Vet Radar team, where I owned the React (TypeScript) client hosted on S3 and built the Node.js/Express services behind the product, containerised with Docker on ECS/Fargate, with the surrounding AWS footprint managed as code in Terraform. I am AWS Certified Solutions Architect -- Professional, so the wider serverless toolkit your stack uses -- Lambda, API Gateway, DynamoDB, SNS/SQS, CloudFront, and the Serverless Framework -- is familiar territory. I will be straight that my hands-on AWS work has been container-based rather than Lambda and the Serverless Framework specifically; given my IaC background and the certification, I would pick those up quickly. I also lean on AI development tools day to day, and I like working somewhere that stays curious about what is new.
+
+Dave Clark having spent 25+ years as a New Zealand company -- from branding work as iconic as the All Blacks logo through to modern SaaS and digital -- is a track record I would be proud to contribute to, and the team culture you described is one I would thrive in. I would welcome the chance to take the conversation further. Thank you for your consideration.
+
+\vspace{0.5em}
+
+Sincerely, \\
+Jonathan Xu
+
+\end{document}
