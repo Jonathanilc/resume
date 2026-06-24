@@ -32,7 +32,7 @@ This repo holds Jonathan Xu's LaTeX resume + cover letter. A **variant** is a ta
 
 ## Candidate fact sheet (fixed — reuse verbatim, do not fabricate)
 Identity / contact (note: use the resume email, NOT the session/IDEXX email):
-- Jonathan Xu · `jonathanilc@hotmail.com` · (+64) 21-026-24525
+- Jonathan Xu · `jono_x@icloud.com` (LaTeX: escape the underscore as `jono\_x@icloud.com`) · (+64) 21-026-24525
 - LinkedIn `jonoxu` <https://www.linkedin.com/in/jonathan-x-4aba55115> · GitHub <https://github.com/Jonathanilc>
 - Auckland, New Zealand · **full NZ working rights** · open to contract/remote
 - Languages: English (fluent), Mandarin (native) · 10+ years experience
@@ -81,6 +81,7 @@ Kebab-case folder under `variants/`. Existing repo practice mixes **angle** name
 
 ## Common mistakes
 - Re-scanning the whole repo — this skill is the cache; only open an existing variant to copy structure.
-- Using the session/IDEXX email instead of `jonathanilc@hotmail.com`.
+- Using the session/IDEXX email instead of `jono_x@icloud.com`.
+- Forgetting to escape the underscore in the email: it must be `jono\_x@icloud.com` in display text (the `\email{}` macro and `\href{mailto:jono_x@icloud.com}{jono\_x@icloud.com}` both need the escaped form in the visible text).
 - Fabricating a JD-required skill instead of framing the gap honestly.
 - Forgetting the header comment, or committing/pushing without being asked.
